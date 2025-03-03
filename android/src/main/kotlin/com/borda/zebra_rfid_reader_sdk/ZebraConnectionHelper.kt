@@ -34,7 +34,7 @@ class ZebraConnectionHelper(
 
     init {
         Log.d(LOG_TAG, "Creating reader for bluetooth connection")
-        readers = Readers(context, ENUM_TRANSPORT.BLUETOOTH)
+        readers = Readers(context, ENUM_TRANSPORT.RE_SERIAL)
     }
 
     override fun onCleared() {
@@ -173,7 +173,7 @@ class ZebraConnectionHelper(
      * Resets the RFID reader configuration and clears associated resources.
      */
     private fun clearConfiguration() {
-        readers = Readers(context, ENUM_TRANSPORT.BLUETOOTH)
+        readers = Readers(context, ENUM_TRANSPORT.RE_SERIAL)
         availableRFIDReaderList = null
         readerDevice = null
         reader = null
