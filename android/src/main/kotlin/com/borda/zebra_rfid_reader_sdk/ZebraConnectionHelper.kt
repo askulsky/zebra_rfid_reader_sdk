@@ -334,7 +334,7 @@ class ZebraConnectionHelper(
      * @return The list of paired RFID readers.
      */
     fun getAvailableReaderList(): java.util.ArrayList<ReaderDevice> {
-        return readers.GetAvailableRFIDReaderList()val availableRFIDReaderList = readers.GetAvailableRFIDReaderList()
+        val availableRFIDReaderList = readers.GetAvailableRFIDReaderList()
         if (availableRFIDReaderList != null) {
             Log.d(LOG_TAG, "Readers found: " + availableRFIDReaderList.toString())
         } else {
