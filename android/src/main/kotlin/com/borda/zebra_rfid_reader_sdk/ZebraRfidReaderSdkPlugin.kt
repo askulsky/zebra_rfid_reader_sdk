@@ -108,6 +108,16 @@ class ZebraRfidReaderSdkPlugin : FlutterPlugin, MethodCallHandler {
                 result.success(Gson().toJson(dataList))
             }
 
+            "startInventory" -> {
+                Log.d(LOG_TAG, "startInventory called")
+                connectionHelper.startInventory()
+            }
+
+            "stopInventory" -> {
+                Log.d(LOG_TAG, "stopInventory called")
+                connectionHelper.stopInventory()
+            }
+
             else -> result.notImplemented()
         }
 
