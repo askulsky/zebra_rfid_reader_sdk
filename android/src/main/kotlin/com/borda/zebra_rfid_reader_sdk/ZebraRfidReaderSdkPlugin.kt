@@ -108,6 +108,16 @@ class ZebraRfidReaderSdkPlugin : FlutterPlugin, MethodCallHandler {
                 result.success(Gson().toJson(dataList))
             }
 
+            "startRfidRead" -> {
+                Log.d(LOG_TAG, "startRfidRead called")
+                connectionHelper.startRfidRead()
+            }
+
+            "stopRfidRead" -> {
+                Log.d(LOG_TAG, "stopRfidRead called")
+                connectionHelper.stopRfidRead()
+            }
+
             else -> result.notImplemented()
         }
 
