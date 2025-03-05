@@ -65,6 +65,14 @@ class ZebraRfidReaderSdk {
     await ZebraRfidReaderSdkPlatform.instance.stopFindingTheTag();
   }
 
+  Future<void> startInventory() async {
+    await ZebraRfidReaderSdkPlatform.instance.startInventory();
+  }
+
+  Future<void> stopInventory() async {
+    await ZebraRfidReaderSdkPlatform.instance.stopInventory();
+  }
+
   /// Returns a stream of connected reader devices.
   Stream<dynamic> get findingTag {
     return ZebraRfidReaderSdkPlatform.instance.findingTag;
