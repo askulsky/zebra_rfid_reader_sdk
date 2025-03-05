@@ -73,6 +73,16 @@ class MethodChannelZebraRfidReaderSdk extends ZebraRfidReaderSdkPlatform {
     await _methodChannel.invokeMethod<void>('stopFindingTheTag');
   }
 
+  @override
+  Future<void> startInventory() async {
+    await _methodChannel.invokeMethod<void>('startInventory');
+  }
+
+  @override
+  Future<void> stopInventory() async {
+    await _methodChannel.invokeMethod<void>('stopInventory');
+  }
+
   /// Returns a stream of connected reader devices.
   @override
   Stream<dynamic> get findingTag {
