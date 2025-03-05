@@ -88,6 +88,14 @@ abstract class ZebraRfidReaderSdkPlatform extends PlatformInterface {
     throw UnimplementedError('stopFindingTheTag() has not been implemented.');
   }
 
+  Future<void> startInventory() async {
+    throw UnimplementedError('startInventory() has not been implemented.');
+  }
+
+  Future<void> stopInventory() async {
+    throw UnimplementedError('stopInventory() has not been implemented.');
+  }
+  
   /// Returns a stream of connected reader devices.
   Stream<dynamic> get findingTag {
     throw UnimplementedError('disconnect() has not been implemented.');
