@@ -343,6 +343,22 @@ class ZebraConnectionHelper(
         return availableRFIDReaderList
     }
 
+    fun startInventory() {
+        if (reader != null) {
+            reader!!.Actions.Inventory.perform()
+        } else {
+            Log.d(LOG_TAG, "Reader is NULL")
+        }
+    }
+
+    fun stopInventory() {
+        if (reader != null) {
+            reader!!.Actions.Inventory.stop()
+        } else {
+            Log.d(LOG_TAG, "Reader is NULL")
+        }
+    }
+
     /**
      * Sets the antenna configuration.
      *
