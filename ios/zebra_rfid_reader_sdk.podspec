@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source_files     = 'Classes/**/*.{h,m,swift}'
   s.static_framework = true
   s.dependency       'Flutter'
-  s.platform         = :ios, '14.0'
+  s.platform         = :ios, '13.0'
   s.frameworks       = 'CoreBluetooth', 'ExternalAccessory'
 
   s.subspec 'symbolrfid-sdk' do |symbolrfid|
