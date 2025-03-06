@@ -49,6 +49,7 @@ class ZebraConnectionHelper(
      */
     @Synchronized
     fun connect(name: String, readerConfig: HashMap<String, Any>) {
+        Log.d(LOG_TAG, "starting to connect to ADDRESS -> $name")
         viewModelScope.launch(Dispatchers.IO) {
 
 
